@@ -1,0 +1,11 @@
+<view class="weui-cells__title">{{title}}</view>
+<view class="weui-cells weui-cells_after-title">
+  <checkbox-group bindchange="onchange" >
+    <label class="weui-cell weui-check__label" wx:for="{{options}}">
+      <checkbox value="{{item.value}}" checked="{{item.checked}}" />
+
+      <view class="weui-cell__bd">{{item.label}}</view>
+
+    </label>
+  </checkbox-group>
+</view>

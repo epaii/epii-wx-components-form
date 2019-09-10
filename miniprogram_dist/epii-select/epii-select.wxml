@@ -1,0 +1,20 @@
+<block wx:if="{{picker}}">
+  <picker bindchange="pickerChange" value="{{select_index}}" range="{{options_show}}">
+    <view class="weui-cells__title" hidden='{{title.length==0}}'>{{title}}</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">{{label}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">{{select_lebal}}</view>
+      </view>
+    </view>
+  </picker>
+</block>
+<block wx:if="{{!picker}}">
+  <view class="weui-cells__title" hidden='{{title.length==0}}'>{{title}}</view>
+  <view bindtap='click' class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">{{label}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{select_lebal}}</view>
+    </view>
+  </view>
+</block>

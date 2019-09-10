@@ -1,0 +1,11 @@
+<view class="weui-cells__title">{{title}}</view>
+<view class="weui-cells weui-cells_after-title">
+  <radio-group name="caichanbaoquan" bindchange="onchange" >
+    <label class="weui-cell weui-check__label" wx:for="{{options}}" bindtap='onchange' data-index="{{index}}" >
+      <radio value="{{item.value}}" checked="{{item.checked}}" />
+
+      <view class="weui-cell__bd">{{item.label}}</view>
+
+    </label>
+  </radio-group>
+</view>
